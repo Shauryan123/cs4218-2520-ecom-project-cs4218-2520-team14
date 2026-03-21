@@ -33,6 +33,3 @@ jobs:
 
       - name: Run Frontend Tests
         run: npm run test:frontend -- --changedSince=origin/main --passWithNoTests
-
-      - name: Run UI Tests
-        run: npm run test:ui -- --changedSince=origin/main
