@@ -3,7 +3,7 @@
 
 import mongoose from "mongoose";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import app, { server } from "../server.js";
+import app from "../app.js";
 import request from "supertest";
 import categoryModel from "../models/categoryModel";
 
@@ -21,7 +21,6 @@ describe("Category Controller Integration Test", () => {
   afterAll(async () => {
     await mongoose.disconnect();
     await mongoServer.stop();
-    server.close();
   });
 
   beforeEach(async () => {

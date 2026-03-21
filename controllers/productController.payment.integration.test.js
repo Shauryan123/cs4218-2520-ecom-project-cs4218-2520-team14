@@ -3,7 +3,7 @@
 
 import mongoose from "mongoose";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import app, { server } from "../server.js";
+import app from "../app.js";
 import orderModel from "../models/orderModel";
 import JWT from "jsonwebtoken";
 import request from "supertest";
@@ -46,7 +46,6 @@ describe("Product Controller - Payment Integration Test", () => {
   afterAll(async () => {
     await mongoose.disconnect();
     await mongoServer.stop();
-    server.close();
   });
 
   it("should process payment and create order successfully", async () => {
