@@ -140,15 +140,16 @@ This section outlines the distribution of files and testing for our team. Our te
 
 ### AGRAWAL SHAURYAN A0265846N
 
-I implemented the Authentication, Authorization helpers, login, registration, and middleware modules, wrote **79 automated unit tests**, and achieved **100% statement, branch, function, and line coverage across all components under my ownership**.
+I implemented and fixed the bugs in the Authentication, Authorization helpers, login, registration, and middleware modules, wrote **80 automated unit tests**, and achieved **100% statement, branch, function, and line coverage across all components under my ownership**.
 
-| Features                                  | Client Related Files                                         | Server Related Files                                                                                                                           |
-| :---------------------------------------- | :----------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Authentication (Login & Registration)** | `pages/Auth/Login.js`<br>`pages/Auth/Register.js`            | **`controllers/authController.js`**<br>1. `registerController`<br>2. `loginController`<br>3. `forgotPasswordController`<br>4. `testController` |
-| **Authentication Helpers**                | —                                                            | **`helpers/authHelper.js`**<br>`hashPassword`<br>`comparePassword`                                                                             |
-| **Authorization Middleware**              | —                                                            | **`middlewares/authMiddleware.js`**<br>`requireSignIn`<br>`isAdmin`                                                                            |
-| **Admin Dashboard UI**                    | `components/AdminMenu.js`<br>`pages/admin/AdminDashboard.js` | —                                                                                                                                              |
-| **Authentication Context**                | `context/auth.js`                                            | —                                                                                                                                              |
+
+| Features | Client Related Files | Server Related Files |
+| :--- | :--- | :--- |
+| **Authentication (Login & Registration)** | `pages/Auth/Login.js`<br>`pages/Auth/Register.js` | **`controllers/authController.js`**<br>1. `registerController`<br>2. `loginController`<br>3. `forgotPasswordController`<br>4. `testController` |
+| **Authentication Helpers** | — | **`helpers/authHelper.js`**<br>1. `hashPassword`<br>2. `comparePassword` |
+| **Authorization Middleware** | — | **`middlewares/authMiddleware.js`**<br>1. `requireSignIn`<br>2. `isAdmin` |
+| **Admin Dashboard UI** | `components/AdminMenu.js`<br>`pages/admin/AdminDashboard.js` | — |
+| **Authentication Context** | `context/auth.js` | — |
 
 ---
 
@@ -184,7 +185,13 @@ I was in charge of these files and all unit tests for them (unit test files ends
 | **General & Layout**   | `components/Footer.js`<br>`components/Header.js`<br>`components/Layout.js`<br>`components/Spinner.js`<br>`pages/About.js`<br>`pages/Pagenotfound.js` | N/A                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### TENG HUI XIN ALICIA A02590646Y
-
+I was in charge of the following sections and all the unit tests for them. For Client related files, it would be name.test.js. For server related files, it would authController.NAME.test.js.
+| Features               | Client Related Files                                                                                                                                 | Server Related Files                                                                                                                                                                                                                                                                                                                                                       |
+| :--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Order** | `pages/user/Orders.js `                                                                                         | **`controllers/authController.js`**<br>1. `updateProfileController`<br>2. `getOrdersController`<br>3. `getAllOrdersController` <br>4. `orderStatusController` <br>5. `getAllUsersController`|
+| **Profile**  | `pages/user/Profile.js`                                                                                                                                   | N/A                                                                                                                                                                                                                                                                                                                                                                        |
+| **Admin View Users**     | `pages/admin/Users.js`                                                                                                                                    | N/A                                                                                                                                                                                                                                                                                                                                                                        |
+| **Search**   | `components/Form/SearchInput.js`<br>`pages/Search.js` | N/A                                                                                  
 ## 7. MS1 CI URL
 
 https://github.com/cs4218/cs4218-2520-ecom-project-cs4218-2520-team14/actions/runs/22282697634
