@@ -28,12 +28,15 @@ app.use("/api/v1/product", productRoutes);
 
 // rest api
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
     res.send("<h1>Welcome to ecommerce app</h1>");
 });
 
 const PORT = process.env.PORT || 6060;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`Server running on ${process.env.DEV_MODE} mode on ${PORT}`.bgCyan.white);
 });
+
+export { server };
+export default app;
