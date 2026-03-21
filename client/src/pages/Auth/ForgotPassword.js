@@ -14,8 +14,12 @@ const ForgotPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+//Name: Shauryan Agrawal
+//Student ID: A0265846N  
   const navigate = useNavigate();
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -50,7 +54,8 @@ const ForgotPassword = () => {
       setIsSubmitting(false);
     }
   };
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
   return (
     <Layout title="Forgot Password - Ecommerce App">
       <div className="form-container" style={{ minHeight: "90vh" }}>

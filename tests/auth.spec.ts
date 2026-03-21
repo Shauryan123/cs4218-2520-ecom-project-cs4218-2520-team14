@@ -124,7 +124,8 @@ async function resetPassword(page: Page, payload: ForgotPasswordInput) {
 async function expectToastOrBodyText(page: Page, pattern: RegExp) {
   await expect(page.locator("body")).toContainText(pattern, { timeout: 10000 });
 }
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
 test.describe("UI Testing: Complete Authentication Flow", () => {
   test.describe("Authentication Page Rendering and Initial UI Integrity", () => {
     test("Register page loads successfully and displays all required fields and controls", async ({
@@ -141,7 +142,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page.locator(registerSelectors.answerInput)).toBeVisible();
       await expect(page.locator(registerSelectors.submitButton)).toBeVisible();
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Login page loads successfully and displays all required fields and controls", async ({
       page,
     }) => {
@@ -152,7 +154,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page.locator(loginSelectors.forgotPasswordButton)).toBeVisible();
       await expect(page.locator(loginSelectors.loginButton)).toBeVisible();
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Forgot Password page loads successfully and displays all required fields and controls", async ({
       page,
     }) => {
@@ -163,7 +166,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page.locator(forgotSelectors.newPasswordInput)).toBeVisible();
       await expect(page.locator(forgotSelectors.resetButton)).toBeVisible();
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Authentication routes are directly accessible without rendering errors", async ({
       page,
     }) => {
@@ -183,7 +187,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       ).toBeVisible();
     });
   });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Successful Registration, Feedback, and Redirect", () => {
     test("User can complete registration form successfully with valid data", async ({
       page,
@@ -199,7 +204,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
 
       expect(user.email).toContain("@test.com");
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Successful registration redirects user to login page with login UI ready", async ({
       page,
     }) => {
@@ -216,7 +222,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page.locator(loginSelectors.passwordInput)).toBeVisible();
     });
   });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Successful Login Flow", () => {
     test("Registered user can log in successfully with valid credentials", async ({
       page,
@@ -236,7 +243,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expectToastOrBodyText(page, /login successfully/i);
       await expect(page).not.toHaveURL(/\/login$/);
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Successful login transitions user out of the login page", async ({
       page,
     }) => {
@@ -255,8 +263,11 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page).not.toHaveURL(/\/login$/);
     });
   });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Login Feedback for Invalid Credentials", () => {
+    //Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Invalid login shows visible error feedback and keeps user in auth flow", async ({
       page,
     }) => {
@@ -271,7 +282,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
         /something went wrong|invalid password|invalid email or password|email is not registerd|invalid/i
       );
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("After failed login attempt, form remains usable for retry", async ({
       page,
     }) => {
@@ -295,7 +307,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page.locator(loginSelectors.passwordInput)).toHaveValue("retry123");
     });
   });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Forgot Password Navigation and Accessibility", () => {
     test("User can navigate from Login page to Forgot Password page using the visible action button", async ({
       page,
@@ -313,7 +326,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page.locator(forgotSelectors.newPasswordInput)).toBeVisible();
     });
   });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Successful Forgot Password Recovery Flow", () => {
     test("User can reset password successfully and then log in with the new password", async ({
       page,
@@ -352,7 +366,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expectToastOrBodyText(page, /login successfully/i);
       await expect(page).not.toHaveURL(/\/login$/);
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Forgot Password success redirects the user back to Login page", async ({
       page,
     }) => {
@@ -375,7 +390,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       ).toBeVisible();
     });
   });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Navigation Consistency Across Authentication Screens", () => {
     test("Authentication pages remain reachable through direct route access", async ({
       page,
@@ -384,7 +400,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await gotoLogin(page);
       await gotoForgotPassword(page);
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Successful registration and successful forgot-password both redirect to Login page correctly", async ({
       page,
     }) => {
@@ -423,7 +440,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       ).toBeVisible();
       await expect(page.locator(registerSelectors.nameInput)).toBeVisible();
     });
-
+//Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Login form prevents empty submission and keeps user on Login page", async ({
       page,
     }) => {
@@ -438,6 +456,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page.locator(loginSelectors.emailInput)).toBeVisible();
     });
 
+    //Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Forgot Password form prevents empty submission and keeps user on Forgot Password page", async ({
       page,
     }) => {
@@ -453,6 +473,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
     });
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Submission-State Protection and Duplicate Submission Prevention", () => {
     test("Login form disables inputs and shows loading state while request is processing", async ({
       page,
@@ -486,6 +508,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page).not.toHaveURL(/\/login$/);
     });
 
+    //Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Repeated rapid login interactions do not break UI state while submission is in flight", async ({
       page,
     }) => {
@@ -521,6 +545,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page).not.toHaveURL(/\/login$/);
     });
 
+    //Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Forgot Password form enters submission state during reset request and completes cleanly", async ({
       page,
     }) => {
@@ -557,6 +583,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
     });
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   test.describe("Sequential Real User Authentication Journeys", () => {
     test("User can register and immediately proceed to successful login in one continuous browser flow", async ({
       page,
@@ -577,6 +605,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page).not.toHaveURL(/\/login$/);
     });
 
+    //Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("User can register, reset password, and then log in again with the new password in one realistic sequence", async ({
       page,
     }) => {
@@ -604,6 +634,8 @@ test.describe("UI Testing: Complete Authentication Flow", () => {
       await expect(page).not.toHaveURL(/\/login$/);
     });
 
+    //Name: Shauryan Agrawal
+//Student ID: A0265846N
     test("Authentication pages remain stable after multiple redirects and repeated use", async ({
       page,
     }) => {

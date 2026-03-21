@@ -72,6 +72,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     });
   };
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it("renders base UI: all inputs, heading, and RESET PASSWORD button", () => {
     const { container, getByRole } = render(<ForgotPassword />);
 
@@ -100,6 +102,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     );
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it("submits correct payload to /api/v1/auth/forgot-password", async () => {
     axios.post.mockResolvedValueOnce({
       data: { success: false, message: "Reset failed" },
@@ -118,6 +122,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     });
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it("success: uses server message, shows success toast, navigates to /login, and re-enables UI", async () => {
     axios.post.mockResolvedValueOnce({
       data: {
@@ -160,6 +166,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     });
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it('success: no message => uses fallback "Password Reset Successfully"', async () => {
     axios.post.mockResolvedValueOnce({
       data: {
@@ -181,6 +189,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     expect(mockNavigate).toHaveBeenCalledWith("/login");
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it("failed reset: uses server message when provided, does not navigate", async () => {
     axios.post.mockResolvedValueOnce({
       data: {
@@ -200,6 +210,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     expect(mockNavigate).not.toHaveBeenCalled();
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it('failed reset: fallback error message "Password reset failed" when server gives no message', async () => {
     axios.post.mockResolvedValueOnce({
       data: {
@@ -218,6 +230,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     expect(mockNavigate).not.toHaveBeenCalled();
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it("network/exception: logs error, shows generic toast, and re-enables UI", async () => {
     const err = new Error("Network down");
     axios.post.mockRejectedValueOnce(err);
@@ -244,6 +258,8 @@ describe("ForgotPassword.js (detailed coverage aligned with current ForgotPasswo
     });
   });
 
+  //Name: Shauryan Agrawal
+//Student ID: A0265846N
   it("double-submit guard: second submit while pending does not call axios twice", () => {
     axios.post.mockImplementationOnce(() => new Promise(() => {})); // pending forever
 
