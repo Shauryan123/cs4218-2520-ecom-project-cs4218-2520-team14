@@ -201,6 +201,7 @@ I was in charge of these files and all unit tests for them (unit test files ends
 
 ### TENG HUI XIN ALICIA A02590646Y
 
+MS1
 I was in charge of the following sections and all the unit tests for them. For Client related files, it would be name.test.js. For server related files, it would authController.NAME.test.js.
 | Features | Client Related Files | Server Related Files |
 | :--------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -208,6 +209,20 @@ I was in charge of the following sections and all the unit tests for them. For C
 | **Profile** | `pages/user/Profile.js` | N/A |
 | **Admin View Users** | `pages/admin/Users.js` | N/A |
 | **Search** | `components/Form/SearchInput.js`<br>`pages/Search.js` | N/A
+
+MS2
+I was incharge of the following files.
+
+Integration Testing:
+- `authController.getAllUsersController.integration.test.js`
+- `authController.ordersController.integration.test.js`
+- `authController.updateProfileController.integration.test.js`
+
+UI Testing:
+- `admin-users.spec.ts`
+- `search.spec.ts`
+- `user-orders.spec.ts`
+- `user-profile.spec.ts`
 
 ## 7. MS1 CI URL
 
