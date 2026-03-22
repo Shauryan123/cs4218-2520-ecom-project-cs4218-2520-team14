@@ -3,10 +3,9 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import { hashPassword } from "../helpers/authHelper.js";
 import Category from "../models/categoryModel.js";
-import Product from "../models/productModel.js";
 import Order from "../models/orderModel.js";
+import Product from "../models/productModel.js";
 import User from "../models/userModel.js";
-import { hashPassword } from "../helpers/authHelper.js";
 
 export default async function setup() {
   // 1. Start memory DB
