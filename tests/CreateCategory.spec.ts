@@ -1,6 +1,6 @@
 // Jonas Ong, A0252052U
 
-import test from "@playwright/test";
+import test, { expect } from "@playwright/test";
 
 // test.describe.configure({ mode: "parallel" });
 
@@ -97,9 +97,11 @@ test.describe("Create Category", () => {
     const categoryId = categoryData.category._id;
 
     // Clean up by deleting the created category
-    await request.delete("/api/v1/category/delete-category/*", {
-      data: { id: categoryId },
-    });
+    const response = await request.delete(
+      `/api/v1/category/delete-category/${categoryId}`,
+      { headers: { Authorization: `Bearer ${authData.token}` } },
+    );
+    expect(response.ok()).toBeTruthy();
   });
 });
 
@@ -229,11 +231,16 @@ test.describe("Update Category", () => {
     // Clean up by renaming the category back to original name
     const categoryResponse = await categoryPromise;
     const categoryData = await categoryResponse.json();
-    const categoryId = categoryData.category._id;
+    const categoryId = categoryData.category._id.toString();
 
-    await request.put("/api/v1/category/update-category/*", {
-      data: { id: categoryId, name: "Books" },
-    });
+    const response = await request.put(
+      `/api/v1/category/update-category/${categoryId}`,
+      {
+        data: { name: "Books" },
+        headers: { Authorization: `Bearer ${authData.token}` },
+      },
+    );
+    expect(response.ok()).toBeTruthy();
   });
 });
 
@@ -268,9 +275,11 @@ test.describe("Delete Category", () => {
     request,
   }) => {
     // Arrange - create a category to delete
-    await request.post("/api/v1/category/create-category", {
+    const response = await request.post("/api/v1/category/create-category", {
       data: { name: "New category" },
+      headers: { Authorization: `Bearer ${authData.token}` },
     });
+    expect(response.ok()).toBeTruthy();
     await page.reload();
 
     // Act
