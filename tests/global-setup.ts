@@ -125,7 +125,7 @@ export default async function setup() {
   const userPassword = await hashPassword("password123");
   const adminPassword = await hashPassword("admin123");
 
-  const normalUser = await User.create([
+  await User.create([
     {
       _id: "69bbffabbb744c5c6268221e",
       name: "Mina Sue",
