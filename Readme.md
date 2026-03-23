@@ -140,7 +140,7 @@ This section outlines the distribution of files and testing for our team. Our te
 
 ### AGRAWAL SHAURYAN A0265846N
 
-I implemented and fixed the bugs in the Authentication, Authorization helpers, login, registration, and middleware modules, wrote **80 automated unit tests**, and achieved **100% statement, branch, function, and line coverage across all components under my ownership**.
+I implemented and fixed the bugs in the Authentication, Authorization helpers, login, registration, and middleware modules, wrote **80 automated unit tests**, and achieved **100% statement, branch, function, and line coverage across all components under my ownership** (MS1). I built 61 backend integration tests using real MongoDB/bcrypt/JWT via MongoMemoryServer and 40 Playwright end-to-end UI tests covering authentication flows and admin dashboard access control, discovering and fixing 4 additional bugs invisible to unit testing (MS2).
 
 | Features                                  | Client Related Files                                         | Server Related Files                                                                                                                           |
 | :---------------------------------------- | :----------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -150,6 +150,18 @@ I implemented and fixed the bugs in the Authentication, Authorization helpers, l
 | **Admin Dashboard UI**                    | `components/AdminMenu.js`<br>`pages/admin/AdminDashboard.js` | —                                                                                                                                              |
 | **Authentication Context**                | `context/auth.js`                                            | —                                                                                                                                              |
 
+#### Integration & UI Tests (MS2)
+
+- Integration tests (61 tests total):
+  - `controllers/authController.register.integration.test.js` (19 tests)
+  - `controllers/authController.login.integration.test.js` (18 tests)
+  - `controllers/authController.forgotPassword.integration.test.js` (15 tests)
+  - `controllers/authController.auth.e2e.integration.test.js` (9 tests)
+- UI tests (40 tests total):
+  - `tests/auth.spec.ts` (24 tests)
+  - `tests/admin-dashboard.spec.ts` (16 tests)
+- Bug fix (implemented during UI testing):
+  - `client/src/pages/Auth/ForgotPassword.js` — created missing Forgot Password page discovered during Playwright E2E testing
 ---
 
 ### CHIA YORK LIM A0258147X
