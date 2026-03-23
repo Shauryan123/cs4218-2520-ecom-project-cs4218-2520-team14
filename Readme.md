@@ -162,6 +162,7 @@ I implemented and fixed the bugs in the Authentication, Authorization helpers, l
   - `tests/admin-dashboard.spec.ts` (16 tests)
 - Bug fix (implemented during UI testing):
   - `client/src/pages/Auth/ForgotPassword.js` — created missing Forgot Password page discovered during Playwright E2E testing
+  
 ---
 
 ### CHIA YORK LIM A0258147X
